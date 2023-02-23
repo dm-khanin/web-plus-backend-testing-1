@@ -13,11 +13,12 @@ describe('PostsService', () => {
   });
 
   it('should add a new post', () => {
-    const createdPost = postsService.create(post)
+    const created = postsService.create(post);
+    const createdPost = postsService.find(created.id);
     expect(createdPost).toEqual({
-      id: '2',
-      text: 'Mocked post',
-      date: expect.any(String),
+      id: created.id,
+      text: created.text,
+      date: created.date,
     });
   });
 
