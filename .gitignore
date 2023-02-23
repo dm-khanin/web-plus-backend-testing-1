@@ -1,2 +1,4 @@
 node_modules
 reports
+.idea
+test-report.html

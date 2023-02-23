@@ -13,10 +13,13 @@ describe('PostsService', () => {
   });
 
   it('should add a new post', () => {
-    // реализуйте тест-кейс
+    const foundPost = postsService.find('1');
+    expect(foundPost).not.toBe(undefined);
   });
 
   it('should find a post', () => {
-    // реализуйте тест-кейс
+    const foundPost = postsService.find('1');
+    expect(foundPost).not.toBe(undefined);
+    expect(foundPost?.text).toBe('Some pre-existing post');
   });
 });
