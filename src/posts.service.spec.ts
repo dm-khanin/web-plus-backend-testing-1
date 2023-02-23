@@ -19,7 +19,6 @@ describe('PostsService', () => {
 
   it('should find a post', () => {
     const foundPost = postsService.find('1');
-    expect(foundPost).not.toBe(undefined);
     expect(foundPost).toEqual({
       id: '1',
       text: 'Some pre-existing post',
