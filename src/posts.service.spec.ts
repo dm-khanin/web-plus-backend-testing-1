@@ -13,8 +13,8 @@ describe('PostsService', () => {
   });
 
   it('should add a new post', () => {
-    const foundPost = postsService.find('1');
-    expect(foundPost).not.toBe(undefined);
+    const createdPost = postsService.create(post)
+    expect(createdPost).toEqual(createdPost);
   });
 
   it('should find a post', () => {
